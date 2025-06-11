@@ -19,14 +19,27 @@ export default {
     },
     extend: {
       colors: {
+        // Keep existing shadcn colors
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
+        // Override primary and accent with FlujoConce brand colors
         primary: {
-          DEFAULT: "hsl(var(--primary))",
-          foreground: "hsl(var(--primary-foreground))",
+          50: "#f0faff",
+          100: "#e0f4fe",
+          200: "#b9e9fe",
+          300: "#7bd8fd",
+          400: "#48cae4", // Main brand color
+          500: "#1ba3c4",
+          600: "#1782a6",
+          700: "#176887",
+          800: "#19566f",
+          900: "#1a485e",
+          950: "#0f2f3f",
+          DEFAULT: "#48cae4",
+          foreground: "#ffffff",
         },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
@@ -41,8 +54,19 @@ export default {
           foreground: "hsl(var(--muted-foreground))",
         },
         accent: {
-          DEFAULT: "hsl(var(--accent))",
-          foreground: "hsl(var(--accent-foreground))",
+          50: "#fff8ed",
+          100: "#ffefd5",
+          200: "#ffdcaa",
+          300: "#ffc474",
+          400: "#ffa23c",
+          500: "#ff9f1c", // Action color
+          600: "#f07316",
+          700: "#c7530d",
+          800: "#9e4213",
+          900: "#7f3813",
+          950: "#451a07",
+          DEFAULT: "#ff9f1c",
+          foreground: "#ffffff",
         },
         popover: {
           DEFAULT: "hsl(var(--popover))",
@@ -62,6 +86,18 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+      },
+      fontFamily: {
+        sans: [
+          "Roboto",
+          "ui-sans-serif",
+          "system-ui",
+          "-apple-system",
+          "BlinkMacSystemFont",
+          "Segoe UI",
+          "Arial",
+          "sans-serif",
+        ],
       },
       borderRadius: {
         lg: "var(--radius)",
